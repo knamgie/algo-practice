@@ -30,10 +30,10 @@ void Solve() {
     if (t <= t_min && su < su_min) {
       t_min = t;
       su_min = su;
-      ans = i;
+      ans = i + 1;
     }
   }
-  cout << ans + 1;
+  cout << ans;
 }
 
 int main() {
