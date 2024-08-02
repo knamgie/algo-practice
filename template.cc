@@ -9,15 +9,6 @@ using f64 = double;
 
 using namespace std;
 
-void Solve() {
-  i32 y, w;
-  cin >> y >> w;
-  
-  i32 d = 6 - max(y, w) + 1;
-  i32 divisor = gcd(d, 6);
-  cout << d / divisor << '/' << 6 / divisor;
-}
+void Solve() {}
 
-int main() {
-  Solve();
-}
+int main() {}

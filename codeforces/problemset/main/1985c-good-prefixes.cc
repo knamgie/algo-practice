@@ -1,23 +1,31 @@
 #include <bits/stdc++.h>
 
+using i32 = int32_t;
+using i64 = int64_t;
+using u32 = uint32_t;
+using u64 = uint64_t;
+using f32 = float;
+using f64 = double;
+
 using namespace std;
 
 void Solve() {
-  int n;
+  i32 n;
   cin >> n;
-  int maximum = 0;
-  int64_t sum = 0;
-  int ans = 0;
-  for (int i = 0; i < n; i++) {
-    int ai;
+
+  i32 max = 0;
+  i64 sum = 0;
+  i32 ans = 0;
+  for (i32 i = 0; i < n; i++) {
+    i32 ai;
     cin >> ai;
-    if (ai > maximum) {
-      sum += maximum;
-      maximum = ai;
+    if (ai > max) {
+      sum += max;
+      max = ai;
     } else {
       sum += ai;
     }
-    if (sum == maximum) {
+    if (sum == max) {
       ans++;
     }
   }
@@ -25,7 +33,7 @@ void Solve() {
 }
 
 int main() {
-  int t;
+  i32 t;
   cin >> t;
   while (t--) {
     Solve();
