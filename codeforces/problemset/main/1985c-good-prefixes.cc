@@ -12,13 +12,15 @@ using namespace std;
 void Solve() {
   i32 n;
   cin >> n;
+  vector<i32> a(n);
+  for (i32& ai : a) {
+    cin >> ai;
+  }
 
   i32 max = 0;
   i64 sum = 0;
   i32 ans = 0;
-  for (i32 i = 0; i < n; i++) {
-    i32 ai;
-    cin >> ai;
+  for (i32 ai : a) {
     if (ai > max) {
       sum += max;
       max = ai;
