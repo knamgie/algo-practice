@@ -14,11 +14,11 @@ void Solve() {
   cin >> s;
 
   i32 ans = 1;
-  bool flag = false;
+  bool flag = true;
   for (i32 i = 1; i < s.size(); i++) {
     if (s[i - 1] != s[i]) {
-      if (s[i] == '1' && !flag) {
-        flag = true;
+      if (s[i] == '1' && flag) {
+        flag = false;
       } else {
         ans++;
       }
