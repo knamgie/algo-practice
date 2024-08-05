@@ -19,7 +19,7 @@ void Solve() {
       x[i] = max(xi, yi);
       y[i] = min(xi, yi);
       flag = false;
-    } else if (!flag ) {
+    } else if (!flag) {
       if (x[i] > y[i]) {
         swap(x[i], y[i]);
       }
