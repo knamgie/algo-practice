@@ -20,8 +20,7 @@ void Solve() {
     if (a[i] != b[i]) {
       if (a[i] > b[i]) { 
         asum += a[i];
-      } 
-      else { 
+      } else { 
         bsum += b[i];
       }
     } else if (a[i] == -1) { 
