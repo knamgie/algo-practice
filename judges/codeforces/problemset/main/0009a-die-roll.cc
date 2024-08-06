@@ -12,8 +12,8 @@ void Solve() {
   cin >> y >> w;
 
   i32 d = 6 - max(y, w) + 1;
-  i32 divisor = gcd(d, 6);
-  cout << d / divisor << '/' << 6 / divisor;
+  i32 div = gcd(d, 6);
+  cout << d / div << '/' << 6 / div;
 }
 
 int main() {

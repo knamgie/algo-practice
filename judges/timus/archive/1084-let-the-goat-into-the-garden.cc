@@ -21,9 +21,9 @@ void Solve() {
   } else {
     f64 side_part = 2 * sqrt(r * r - (side / 2) * (side / 2));
     f64 theta = 2 * asin((side / 2) / r) - pi / 2;
-    f64 square_area_part = 4 * side_part * side / (2 * 2);
-    f64 circle_area_part = 4 * (theta / 2) * r * r;
-    area = square_area_part + circle_area_part;
+    f64 square_part = 4 * side_part * side / (2 * 2);
+    f64 circle_part = 4 * (theta / 2) * r * r;
+    area = square_part + circle_part;
   }
   cout << fixed << setprecision(3) << area;
 }

@@ -15,17 +15,17 @@ void Solve() {
     cin >> ai;
   }
 
-  i32 max = 0;
+  i32 mx = 0;
   i64 sum = 0;
   i32 ans = 0;
   for (i32 ai : a) {
-    if (ai > max) {
-      sum += max;
-      max = ai;
+    if (ai > mx) {
+      sum += mx;
+      mx = ai;
     } else {
       sum += ai;
     }
-    if (sum == max) {
+    if (sum == mx) {
       ans++;
     }
   }
