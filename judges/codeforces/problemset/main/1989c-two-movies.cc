@@ -18,14 +18,14 @@ void Solve() {
     cin >> bi;
   }
 
-  i32 asum = 0, bsum = 0;
+  i32 a_sum = 0, b_sum = 0;
   i32 neg = 0, pos = 0;
   for (i32 i = 0; i < n; i++) {
     if (a[i] != b[i]) {
       if (a[i] > b[i]) {
-        asum += a[i];
+        a_sum += a[i];
       } else {
-        bsum += b[i];
+        b_sum += b[i];
       }
     } else if (a[i] == -1) {
       neg--;
@@ -34,13 +34,13 @@ void Solve() {
     }
   }
 
-  i32 maxmin = INT_MIN;
+  i32 max_min = INT_MIN;
   for (i32 diff = neg; diff <= pos; diff++) {
-    i32 atotal = asum + diff;
-    i32 btotal = bsum + neg + pos - diff;
-    maxmin = max(maxmin, min(atotal, btotal));
+    i32 a_total = a_sum + diff;
+    i32 b_total = b_sum + neg + pos - diff;
+    max_min = max(max_min, min(a_total, b_total));
   }
-  cout << maxmin << '\n';
+  cout << max_min << '\n';
 }
 
 int main() {
