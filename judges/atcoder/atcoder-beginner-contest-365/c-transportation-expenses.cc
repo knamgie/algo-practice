@@ -28,6 +28,7 @@ void Solve() {
   for (i32 ai : a) {
     mx = max(mx, ai);
   }
+  
   if (FindSum(a, mx) <= m) {
     cout << "infinite";
     return;
