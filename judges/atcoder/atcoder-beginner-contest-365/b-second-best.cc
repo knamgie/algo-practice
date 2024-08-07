@@ -11,15 +11,11 @@ void Solve() {
   i32 n;
   cin >> n;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) { cin >> ai; }
 
   i32 i1 = 0;
   for (i32 i = 0; i < n; i++) {
-    if (a[i] > a[i1]) {
-      i1 = i;
-    }
+    if (a[i] > a[i1]) { i1 = i; }
   }
 
   i32 i2 = (i1 == 0) ? 1 : 0;

@@ -14,11 +14,9 @@ void Solve() {
   cin >> side >> r;
 
   f64 area;
-  if (r <= side / 2) {
-    area = pi * r * r;
-  } else if (r >= side / sqrt(2)) {
-    area = side * side;
-  } else {
+  if (r <= side / 2) { area = pi * r * r; } 
+  else if (r >= side / sqrt(2)) { area = side * side; }
+  else {
     f64 side_part = 2 * sqrt(r * r - (side / 2) * (side / 2));
     f64 theta = 2 * asin((side / 2) / r) - pi / 2;
     f64 square_part = 4 * side_part * side / (2 * 2);

@@ -17,9 +17,7 @@ void Solve() {
     ans++;
     k -= n;
     flag = !flag;
-    if (flag) {
-      n--;
-    }
+    if (flag) { n--; }
   }
   cout << ans << '\n';
 }

@@ -12,9 +12,7 @@ void Solve() {
   cin >> n >> m;
   vector<vector<char>> grid(n, vector<char>(m));
   for (auto& row : grid) {
-    for (char& c : row) {
-      cin >> c;
-    }
+    for (char& c : row) { cin >> c; }
   }
 
   vector<i32> land(m, n - 1);
@@ -31,9 +29,7 @@ void Solve() {
   }
 
   for (auto& row : grid) {
-    for (char c : row) {
-      cout << c;
-    }
+    for (char c : row) { cout << c; }
     cout << '\n';
   }
 }

@@ -11,9 +11,7 @@ void Solve() {
   i32 n;
   cin >> n;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) { cin >> ai; }
 
   i32 mx = 0;
   i64 sum = 0;
@@ -22,12 +20,8 @@ void Solve() {
     if (ai > mx) {
       sum += mx;
       mx = ai;
-    } else {
-      sum += ai;
-    }
-    if (sum == mx) {
-      ans++;
-    }
+    } else { sum += ai; }
+    if (sum == mx) { ans++; }
   }
   cout << ans << '\n';
 }

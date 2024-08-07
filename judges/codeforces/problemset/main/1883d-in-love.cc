@@ -12,8 +12,9 @@ i32 sz = 0;
 
 void Solve() {
   char sign;
+  cin >> sign;
   i32 l, r;
-  cin >> sign >> l >> r;
+  cin >> l >> r;
 
   if (sign == '+') {
     sz++;

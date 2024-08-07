@@ -18,11 +18,8 @@ void Solve() {
   i32 neg = 0, pos = 0;
   for (i32 i = 0; i < n; i++) {
     if (a[i] != b[i]) {
-      if (a[i] > b[i]) { 
-        asum += a[i];
-      } else { 
-        bsum += b[i];
-      }
+      if (a[i] > b[i]) { asum += a[i]; }
+      else { bsum += b[i]; }
     } else if (a[i] == -1) { 
       neg--; 
     } else if (a[i] == 1) { 

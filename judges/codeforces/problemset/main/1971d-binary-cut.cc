@@ -17,9 +17,7 @@ void Solve() {
     if (s[i - 1] != s[i]) {
       if (s[i] == '1' && flag) {
         flag = false;
-      } else {
-        ans++;
-      }
+      } else { ans++; }
     }
   }
   cout << ans << '\n';
