@@ -20,6 +20,4 @@ void Solve() {
   cout << days;
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

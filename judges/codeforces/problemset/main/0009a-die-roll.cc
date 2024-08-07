@@ -16,6 +16,4 @@ void Solve() {
   cout << d / div << '/' << 6 / div;
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

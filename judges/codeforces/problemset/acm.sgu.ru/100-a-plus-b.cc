@@ -13,6 +13,4 @@ void Solve() {
   cout << a + b;
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

@@ -13,7 +13,9 @@ void Solve() {
   string s;
   cin >> s;
   vector<i32> ind(m);
-  for (i32& i : ind) { cin >> i; }
+  for (i32& i : ind) {
+    cin >> i;
+  }
   string c;
   cin >> c;
 

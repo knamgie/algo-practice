@@ -42,6 +42,4 @@ void Solve() {
   cout << ans;
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

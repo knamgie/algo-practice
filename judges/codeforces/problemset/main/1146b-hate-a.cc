@@ -28,6 +28,4 @@ void Solve() {
   }
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

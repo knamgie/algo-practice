@@ -11,7 +11,9 @@ void Solve() {
   i32 n, m;
   cin >> n >> m;
   vector<i32> t(n);
-  for (i32& ti : t) { cin >> ti; }
+  for (i32& ti : t) {
+    cin >> ti;
+  }
 
   vector<i32> ans(n);
   i32 sum = t.front();
@@ -32,6 +34,4 @@ void Solve() {
   }
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

@@ -17,17 +17,18 @@ void Solve() {
     for (i32 i = 0; i < n; i++) {
       xn = (xn * x) % m;
     }
-    if (xn == y) { xs.push_back(x); }
+    if (xn == y) {
+      xs.push_back(x);
+    }
   }
 
-  if (xs.empty()) { cout << -1; }
-  else {
+  if (xs.empty()) {
+    cout << -1;
+  } else {
     for (i32 x : xs) {
       cout << x << ' ';
     }
   }
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }

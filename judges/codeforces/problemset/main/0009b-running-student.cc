@@ -11,7 +11,9 @@ void Solve() {
   i32 n, vb, vs;
   cin >> n >> vb >> vs;
   vector<i64> stops(n);
-  for (i64& stop : stops) { cin >> stop; }
+  for (i64& stop : stops) {
+    cin >> stop;
+  }
   i32 ux, uy;
   cin >> ux >> uy;
 
@@ -32,6 +34,4 @@ void Solve() {
   cout << ans;
 }
 
-int main() {
-  Solve();
-}
+int main() { Solve(); }
