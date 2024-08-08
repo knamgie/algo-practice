@@ -7,6 +7,10 @@ using f64 = double;
 
 using namespace std;
 
+f64 Log(f64 base, f64 arg) {
+  return log(arg) / log(base);
+}
+
 void Solve() {
   i32 n;
   cin >> n;
@@ -28,8 +32,8 @@ void Solve() {
 
   i64 prev = 0, ans = 0;
   for (i32 i = 1; i < n; i++) {
-    if ((f64)prev > log(log(a[i]) / log(a[i - 1])) / log(2)) {
-      prev += ceil((log(log(a[i - 1]) / log(a[i])) / log(2)));
+    if ((f64)prev > Log(2, Log(a[i - 1], a[i]))) {
+      prev += ceil(Log(2, Log(a[i], a[i - 1])));
       ans += prev;
     } else {
       prev = 0;
