@@ -7,9 +7,7 @@ using f64 = double;
 
 using namespace std;
 
-f64 Log(f64 base, f64 arg) {
-  return log(arg) / log(base);
-}
+f64 Log(f64 base, f64 arg) { return log(arg) / log(base); }
 
 void Solve() {
   i32 n;
