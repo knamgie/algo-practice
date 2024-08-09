@@ -34,7 +34,7 @@ void Solve() {
         }
       } else {
         if (a[i] <= 2) status = 0;
-        ans++; 
+        ans++;
       }
     }
   }
