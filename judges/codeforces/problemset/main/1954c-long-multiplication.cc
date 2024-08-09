@@ -20,9 +20,7 @@ void Solve() {
       y[i] = min(xi, yi);
       flag = false;
     } else if (!flag) {
-      if (x[i] > y[i]) {
-        swap(x[i], y[i]);
-      }
+      if (x[i] > y[i]) swap(x[i], y[i]);
     }
   }
   cout << x << '\n';

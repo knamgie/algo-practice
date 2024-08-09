@@ -9,9 +9,7 @@ using namespace std;
 
 i64 FindAdditive(vector<i32>& a) {
   i64 addit = 0;
-  for (i32 ai : a) {
-    addit += ai;
-  }
+  for (i32 ai : a) addit += ai;
 
   i32 mx = 0;
   unordered_set<i32> taken;
