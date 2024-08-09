@@ -12,14 +12,10 @@ void Solve() {
   i32 m;
   cin >> n >> m;
   vector<i64> paids(m);
-  for (i64& p : paids) {
-    cin >> p;
-  }
+  for (i64& p : paids) cin >> p;
 
   n *= 100;
-  for (i64& p : paids) {
-    p *= 100;
-  }
+  for (i64& p : paids) p *= 100;
 
   i64 v = 0;
   i32 i = 0;

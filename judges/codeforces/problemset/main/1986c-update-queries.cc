@@ -13,9 +13,7 @@ void Solve() {
   string s;
   cin >> s;
   vector<i32> ind(m);
-  for (i32& i : ind) {
-    cin >> i;
-  }
+  for (i32& i : ind) cin >> i;
   string c;
   cin >> c;
 
@@ -28,9 +26,7 @@ void Solve() {
     ic++;
 
     i32 j = i;
-    while (j < m && ind[i] == ind[j]) {
-      j++;
-    }
+    while (j < m && ind[i] == ind[j]) j++;
     i = j - 1;
   }
   cout << s << '\n';

@@ -11,12 +11,8 @@ void Solve() {
   i32 n;
   cin >> n;
   vector<i32> a(n), b(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
-  for (i32& bi : b) {
-    cin >> bi;
-  }
+  for (i32& ai : a) cin >> ai;
+  for (i32& bi : b) cin >> bi;
 
   i32 a_sum = 0, b_sum = 0;
   i32 neg = 0, pos = 0;

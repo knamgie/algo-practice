@@ -12,11 +12,7 @@ void Solve() {
   cin >> y;
 
   i32 days = 365;
-  if (y % 4 == 0) {
-    if (y % 100 != 0 || y % 400 == 0) {
-      days++;
-    }
-  }
+  if (y % 4 == 0 && (y % 100 != 0 || y % 400 == 0)) days++;
   cout << days;
 }
 

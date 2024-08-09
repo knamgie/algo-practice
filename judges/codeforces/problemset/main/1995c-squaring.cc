@@ -13,14 +13,10 @@ void Solve() {
   i32 n;
   cin >> n;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) cin >> ai;
 
   i32 j = 1;
-  while (j < n && a[j] >= a[j - 1]) {
-    j++;
-  }
+  while (j < n && a[j] >= a[j - 1]) j++;
   for (i32 i = j; i < n; i++) {
     if (a[i] == 1) {
       cout << -1 << '\n';

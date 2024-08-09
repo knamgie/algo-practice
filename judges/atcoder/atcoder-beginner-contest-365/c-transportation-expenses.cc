@@ -9,9 +9,7 @@ using namespace std;
 
 i64 FindSum(vector<i32>& a, i32 limit) {
   i64 sum = 0;
-  for (i32 ai : a) {
-    sum += min(ai, limit);
-  }
+  for (i32 ai : a) sum += min(ai, limit);
   return sum;
 }
 
@@ -20,14 +18,10 @@ void Solve() {
   i64 m;
   cin >> n >> m;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) cin >> ai;
 
   i32 mx = 0;
-  for (i32 ai : a) {
-    mx = max(mx, ai);
-  }
+  for (i32 ai : a) mx = max(mx, ai);
 
   if (FindSum(a, mx) <= m) {
     cout << "infinite";

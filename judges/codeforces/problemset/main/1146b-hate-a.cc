@@ -15,9 +15,7 @@ void Solve() {
   i32 j = 0;
   while (s.size() + ss.size() < t.size()) {
     s += t[j];
-    if (t[j] != 'a') {
-      ss += t[j];
-    }
+    if (t[j] != 'a') ss += t[j];
     j++;
   }
 

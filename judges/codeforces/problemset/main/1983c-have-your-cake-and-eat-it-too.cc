@@ -10,17 +10,18 @@ using namespace std;
 void Solve() {
   i32 n;
   cin >> n;
-  vector<vector<i32>> abc(3, vector<i32>(n));
-  for (auto& pers : abc) {
-    for (i32& val : pers) {
-      cin >> val;
-    }
-  }
+  vector<i32> a(n), b(n), c(n);
+  for (i32& val : a) cin >> val;
+  for (i32& val : b) cin >> val;
+  for (i32& val : c) cin >> val;
+
+  vector<vector<i32>> abc;
+  abc.push_back(a);
+  abc.push_back(b);
+  abc.push_back(c);
 
   i64 tot = 0;
-  for (i32 val : abc[0]) {
-    tot += val;
-  }
+  for (i32 val : abc[0]) tot += val;
 
   vector<vector<i64>> prefs(3, vector<i64>(n + 1));
   for (i32 i = 1; i < n + 1; i++) {
@@ -31,19 +32,12 @@ void Solve() {
 
   for (i32 i1 = 0; i1 < 3; i1++) {
     i32 j1 = 1;
-    while (prefs[i1][j1] < (tot + 2) / 3) {
-      j1++;
-    }
+    while (prefs[i1][j1] < (tot + 2) / 3) j1++;
 
     for (i32 k = 1; k <= 2; k++) {
-      i32 i2 = (i1 + k) % 3;
-      i32 j2 = j1 + 1;
-      while (j2 < n && prefs[i2][j2] - prefs[i2][j1] < (tot + 2) / 3) {
-        j2++;
-      }
-      if (j2 > n || prefs[i2][j2] - prefs[i2][j1] < (tot + 2) / 3) {
-        break;
-      }
+      i32 i2 = (i1 + k) % 3, j2 = j1 + 1;
+      while (j2 < n && prefs[i2][j2] - prefs[i2][j1] < (tot + 2) / 3) j2++;
+      if (j2 > n || prefs[i2][j2] - prefs[i2][j1] < (tot + 2) / 3) break;
 
       i32 i3 = ((k == 1) ? i1 + 2 : i1 + 1) % 3;
       if (prefs[i3][n] - prefs[i3][j2] >= (tot + 2) / 3) {

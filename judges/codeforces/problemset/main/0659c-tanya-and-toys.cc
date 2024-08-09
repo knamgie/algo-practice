@@ -11,14 +11,10 @@ void Solve() {
   i32 n, m;
   cin >> n >> m;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) cin >> ai;
 
   vector<bool> used(1e9 + 1);
-  for (i32 ai : a) {
-    used[ai] = true;
-  }
+  for (i32 ai : a) used[ai] = true;
 
   i32 j = 1;
   i32 sum = 0;

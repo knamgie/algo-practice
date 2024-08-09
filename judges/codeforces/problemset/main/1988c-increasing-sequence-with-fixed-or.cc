@@ -14,9 +14,7 @@ void Solve() {
   cin >> n;
 
   u64 checker = n;
-  while (checker % 2 == 0) {
-    checker /= 2;
-  }
+  while (checker % 2 == 0) checker /= 2;
   if (checker == 1) {
     cout << 1 << '\n';
     cout << n << '\n';
@@ -27,11 +25,9 @@ void Solve() {
   u64 dummy = n;
   vector<i32> ones;
   while (dummy > 0) {
-    if ((dummy & 1) == 1) {
-      ones.push_back(j);
-    }
-    j++;
+    if ((dummy & 1) == 1) ones.push_back(j);
     dummy >>= 1;
+    j++;
   }
 
   vector<u64> rans(ones.size() + 1, n);

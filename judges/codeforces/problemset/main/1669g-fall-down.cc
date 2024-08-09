@@ -10,12 +10,8 @@ using namespace std;
 void Solve() {
   i32 n, m;
   cin >> n >> m;
-  vector<vector<char>> grid(n, vector<char>(m));
-  for (auto& row : grid) {
-    for (char& c : row) {
-      cin >> c;
-    }
-  }
+  vector<string> grid(n);
+  for (auto& row : grid) cin >> row;
 
   vector<i32> land(m, n - 1);
   for (i32 i = n - 1; i >= 0; i--) {
@@ -31,10 +27,7 @@ void Solve() {
   }
 
   for (auto& row : grid) {
-    for (char c : row) {
-      cout << c;
-    }
-    cout << '\n';
+    cout << row << '\n';
   }
 }
 

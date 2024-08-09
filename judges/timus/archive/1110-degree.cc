@@ -14,12 +14,8 @@ void Solve() {
   vector<i32> xs;
   for (i32 x = 0; x < m; x++) {
     i32 xn = 1;
-    for (i32 i = 0; i < n; i++) {
-      xn = (xn * x) % m;
-    }
-    if (xn == y) {
-      xs.push_back(x);
-    }
+    for (i32 i = 0; i < n; i++) xn = (xn * x) % m;
+    if (xn == y) xs.push_back(x);
   }
 
   if (xs.empty()) {

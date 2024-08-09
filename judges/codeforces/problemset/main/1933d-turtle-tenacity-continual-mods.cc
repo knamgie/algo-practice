@@ -11,9 +11,7 @@ void Solve() {
   i32 n;
   cin >> n;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) cin >> ai;
 
   sort(a.begin(), a.end());
   if (a[0] != a[1]) {

@@ -16,9 +16,7 @@ i64 FindAdditive(vector<i32>& a) {
   i32 mx = 0;
   unordered_set<i32> taken;
   for (i32& ai : a) {
-    if (taken.contains(ai) && ai > mx) {
-      mx = ai;
-    }
+    if (taken.contains(ai) && ai > mx) mx = ai;
     taken.insert(ai);
     ai = mx;
   }
@@ -30,9 +28,7 @@ void Solve() {
   i32 n;
   cin >> n;
   vector<i32> a(n);
-  for (i32& ai : a) {
-    cin >> ai;
-  }
+  for (i32& ai : a) cin >> ai;
 
   i64 sum = 0;
   sum += FindAdditive(a);

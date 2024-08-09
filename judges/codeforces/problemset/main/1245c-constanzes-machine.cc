@@ -20,9 +20,7 @@ void Solve() {
     }
   }
 
-  vector<i32> fib(s.size() + 1);
-  fib[0] = 1;
-  fib[1] = 1;
+  vector<i32> fib(s.size() + 1, 1);
   for (i32 i = 2; i < fib.size(); i++) {
     fib[i] = (fib[i - 1] + fib[i - 2]) % mod;
   }
@@ -32,9 +30,7 @@ void Solve() {
     if (s[i] == 'u' || s[i] == 'n') {
       char c = s[i];
       i32 j = 0;
-      while (s[i + j] == c) {
-        j++;
-      }
+      while (s[i + j] == c) j++;
       ans = (ans * fib[j]) % mod;
       i += j - 1;
     }
