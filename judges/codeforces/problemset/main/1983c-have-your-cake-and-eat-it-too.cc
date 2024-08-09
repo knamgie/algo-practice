@@ -15,12 +15,8 @@ void Solve() {
   for (i32& val : b) cin >> val;
   for (i32& val : c) cin >> val;
 
-  vector<vector<i32>> abc;
-  abc.push_back(a);
-  abc.push_back(b);
-  abc.push_back(c);
-
   i64 tot = 0;
+  vector<vector<i32>> abc{a, b, c};
   for (i32 val : abc[0]) tot += val;
 
   vector<vector<i64>> prefs(3, vector<i64>(n + 1));
