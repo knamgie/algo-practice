@@ -22,8 +22,7 @@ void Solve() {
 
   i32 ic = 0;
   for (i32 i = 0; i < m; i++) {
-    s[ind[i] - 1] = c[ic];
-    ic++;
+    s[ind[i] - 1] = c[ic++];
 
     i32 j = i;
     while (j < m && ind[i] == ind[j]) j++;
