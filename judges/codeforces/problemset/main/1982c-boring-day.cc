@@ -18,12 +18,10 @@ void Solve() {
   for (i32 ai : a) {
     sum += ai;
     q.push(ai);
-
     while (!q.empty() && sum > r) {
       sum -= q.front();
       q.pop();
     }
-
     if (l <= sum && sum <= r) {
       ans++;
       sum = 0;
