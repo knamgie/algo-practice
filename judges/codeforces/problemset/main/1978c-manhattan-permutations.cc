@@ -36,7 +36,7 @@ void Solve() {
     swap(perm[1 + j], perm[n - j]);
     j++;
   }
-  
+
   swap(perm[1 + j], perm[1 + j + k]);
 
   cout << "YES\n";
